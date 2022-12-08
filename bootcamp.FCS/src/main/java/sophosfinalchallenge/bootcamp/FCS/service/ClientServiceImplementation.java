@@ -37,4 +37,9 @@ public class ClientServiceImplementation  implements ClientService{
         }).orElse(false);
 
     }
+
+    @Override
+    public Client updateClient(Client client) {
+        return clientRepository.save(client);
+    }
 }

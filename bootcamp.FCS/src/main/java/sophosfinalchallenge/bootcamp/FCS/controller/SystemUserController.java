@@ -36,7 +36,7 @@ public class SystemUserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteSystemUserById(@PathVariable("id") long id){
+    public ResponseEntity deleteSystemUserById(@PathVariable("id") Long id){
         if(systemUserService.deleteSystemUserById(id)){
             return new ResponseEntity<>(HttpStatus.OK);
 
@@ -45,6 +45,13 @@ public class SystemUserController {
         }
 
     }
+    @PutMapping("/{id}")
+    public ResponseEntity updateSystemUser(@PathVariable("id") Long id,@RequestBody SystemUser systemUser){
+        return new ResponseEntity<>(systemUserService.updateSystemUser(systemUser), HttpStatus.OK);
 
 
-}
+
+        }
+    }
+
+

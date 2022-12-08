@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProducServiceImplementation implements  ProductService{
+public class ProductServiceImplementation implements  ProductService{
 
     @Autowired
     ProductRepository productRepository;
@@ -37,5 +37,10 @@ public class ProducServiceImplementation implements  ProductService{
             productRepository.deleteById(id);
             return true;
         }).orElse(false);
+    }
+
+    @Override
+    public Product updateProduct(Product product) {
+        return productRepository.save(product);
     }
 }

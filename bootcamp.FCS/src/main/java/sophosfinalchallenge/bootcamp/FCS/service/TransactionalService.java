@@ -1,5 +1,6 @@
 package sophosfinalchallenge.bootcamp.FCS.service;
 
+import sophosfinalchallenge.bootcamp.FCS.entity.Client;
 import sophosfinalchallenge.bootcamp.FCS.entity.Transactional;
 
 import java.util.List;
@@ -14,6 +15,9 @@ public interface TransactionalService {
     public Optional<Transactional> getTransactionById(long id);
 
     public boolean deleteTransationById(long id);
+
+    public Transactional updateTransactional (Transactional transactional);
+
 
 
 }

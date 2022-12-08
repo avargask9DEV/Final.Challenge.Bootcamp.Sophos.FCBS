@@ -15,4 +15,7 @@ public interface SystemUserService {
 
     public boolean deleteSystemUserById(Long Id);
 
+
+    public SystemUser updateSystemUser (SystemUser systemUser);
+
 }

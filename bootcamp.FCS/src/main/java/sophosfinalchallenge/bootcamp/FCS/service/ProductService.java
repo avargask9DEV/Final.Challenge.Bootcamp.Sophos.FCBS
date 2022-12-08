@@ -1,5 +1,6 @@
 package sophosfinalchallenge.bootcamp.FCS.service;
 
+import sophosfinalchallenge.bootcamp.FCS.entity.Client;
 import sophosfinalchallenge.bootcamp.FCS.entity.Product;
 
 import java.util.List;
@@ -15,6 +16,8 @@ public interface ProductService {
     public Optional<Product> getProductById(Long id);
 
     public boolean deleteProductById(Long id);
+
+    public Product updateProduct (Product product);
 
 
 }

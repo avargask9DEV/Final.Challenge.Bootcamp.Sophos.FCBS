@@ -36,4 +36,9 @@ public class TransactionalServiceImplementation implements  TransactionalService
             return true;
         }).orElse(false);
     }
+
+    @Override
+    public Transactional updateTransactional(Transactional transactional) {
+        return transactionalRepository.save(transactional);
+    }
 }

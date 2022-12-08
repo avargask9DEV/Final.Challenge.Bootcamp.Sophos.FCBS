@@ -37,4 +37,9 @@ public class SystemUserServiceImplementation implements SystemUserService{
             return true;
         }).orElse(false);
     }
+
+    @Override
+    public SystemUser updateSystemUser(SystemUser systemUser) {
+       return systemUserRepository.save(systemUser);
+    }
 }
