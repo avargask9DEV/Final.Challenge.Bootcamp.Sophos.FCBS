@@ -35,9 +35,8 @@ public class SystemUserController {
         return new ResponseEntity<>(systemUserService.createUser(systemUser),HttpStatus.CREATED);
     }
 
-
-    @DeleteMapping
-    public ResponseEntity deleteSystemUserById(@PathVariable("id")Long id){
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteSystemUserById(@PathVariable("id") long id){
         if(systemUserService.deleteSystemUserById(id)){
             return new ResponseEntity<>(HttpStatus.OK);
 

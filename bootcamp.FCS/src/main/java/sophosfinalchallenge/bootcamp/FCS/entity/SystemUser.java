@@ -12,10 +12,10 @@ public class SystemUser {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "usermane")
+    @Column(name = "usermane",nullable = false)
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password",nullable = false)
     private String password;
 
     public SystemUser() {
